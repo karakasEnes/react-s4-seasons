@@ -9,7 +9,7 @@ const SeasonDisplay = (props) => {
   return (
     <div>
       <i className={seasonClassName}></i>
-      <p className={seasonText}></p>
+      <h2>{seasonText}</h2>
       <i className={seasonClassName}></i>
     </div>
   );
