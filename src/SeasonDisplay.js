@@ -1,22 +1,19 @@
 import React from "react";
 
+const getSeason = (lat, month) => {
+  if (month > 2 && month < 9) {
+    return lat > 0 ? "summer" : "winter";
+  } else {
+    return lat > 0 ? "winter" : "summer";
+  }
+};
+
 const SeasonDisplay = (props) => {
-  console.log(props.lat);
+  const season = getSeason(props.lat, new Date().getMonth());
 
-  // const seasonClassName =
-  //   props.season === "winter" ? "heartbeat icon" : "medkit icon";
+  console.log(season);
 
-  // const seasonText = props.season === "winter" ? "Winter!" : "Summary ohey!";
-
-  return (
-    <div>SeasonDisplay</div>
-
-    // <div>
-    //   <i className={seasonClassName}></i>
-    //   <h2>{seasonText}</h2>
-    //   <i className={seasonClassName}></i>
-    // </div>
-  );
+  return <div>SeasonDisplay</div>;
 };
 
 export default SeasonDisplay;
